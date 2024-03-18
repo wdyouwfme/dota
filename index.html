@@ -11,6 +11,23 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <h2 id="teamTitle">Выберите персонажей для Команды 1</h2>
+
+    <div id="characterSelection">
+        Картинки с персонажами
+        <img src="/images/img/agility/101_Templar_Assassin.jpg" alt="Hero 1" onclick="selectCharacter('Hero 1')">
+        <img src="/images/img/agility/101_Templar_Assassin.jpg" alt="Hero 2" onclick="selectCharacter('Hero 2')">
+        <img src="/images/img/agility/101_Templar_Assassin.jpg" alt="Hero 3" onclick="selectCharacter('Hero 3')">
+        Добавьте свои изображения и функции для других персонажей
+    </div>
+
+    <h2>Команда 1</h2>
+    <div id="selectedCharactersTeam1"></div>
+
+    <h2>Команда 2</h2>
+    <div id="selectedCharactersTeam2"></div>
+
+    <button onclick="switchTeam()">Переключить команду</button> -->
     <div class="header">
         <div class="container">
             <div class="header-inner">
@@ -42,422 +59,426 @@
                     <div class="section-inner">
                         <p class="choise-text-enemy">Enemy Team</p>
                         <div class="choise-enemy" id="enemyImageContainer">
-                            <form class="enemyImageForm" id="enemyImageForm">    
-                            </form>
+                            <div class="enemyImageForm" id="enemyImageForm1">    
+                            </div>
                         </div>
                     </div>
                     <div class="section-inner">
                         <p class="choise-text-my">My Team</p>
                         <div class="choise-my" id="myImageContainer">
-                            <form id="myImageForm">
-                            </form>
+                            <div id="myImageForm">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <main class="main">
         <div class="container">
             <div class="main-inner">
-                <div class="strength">
-                    <p class="grid-te">Сила</p>
-                    <div class="grid-container">
-                        <div id="2" class="grid-item">
-                            <img src="images/img/strength/2_Alchemist.jpg" alt="Alchemist">
-                        </div>
-                        <div id="6" class="grid-item">
-                            <img src="images/img/strength/6_Axe.jpg" alt="Axe">
-                        </div>
-                        <div id="13" class="grid-item">
-                            <img src="images/img/strength/13_Bristleback.jpg" alt="Bristleback">
-                        </div>
-                        <div id="15" class="grid-item">
-                            <img src="images/img/strength/15_Centaur_Warrunner.jpg" alt="Centaur_Warrunner">
-                        </div>
-                        <div id="16" class="grid-item">
-                            <img src="images/img/strength/16_Chaos_Knight.jpg" alt="Chaos_Knight">
-                        </div>
-                        <div id="23" class="grid-item">
-                            <img src="images/img/strength/23_Dawnbreaker.jpg" alt="Dawnbreaker">
-                        </div>
-                        <div id="27" class="grid-item">
-                            <img src="images/img/strength/27_Doom.jpg" alt="Doom">
-                        </div>
-                        <div id="28" class="grid-item">
-                            <img src="images/img/strength/28_Dragon_Knight.jpg" alt="Dragon_Knight">
-                        </div>
-                        <div id="30" class="grid-item">
-                            <img src="images/img/strength/30_Earth_Spirit.jpg" alt="Earth_Spirit">
-                        </div>
-                        <div id="31" class="grid-item">
-                            <img src="images/img/strength/31_Earthshaker.jpg" alt="Earthshaker">
-                        </div>
-                        <div id="32" class="grid-item">
-                            <img src="images/img/strength/32_Elder_Titan.jpg" alt="Elder_Titan">
-                        </div>
-                        <div id="40" class="grid-item">
-                            <img src="images/img/strength/40_Huskar.jpg" alt="Huskar">
-                        </div>
-                        <div id="46" class="grid-item">
-                            <img src="images/img/strength/46_Kunkka.jpg" alt="Kunkka">
-                        </div>
-                        <div id="47" class="grid-item">
-                            <img src="images/img/strength/47_Legion_Commander.jpg" alt="Legion_Commande">
-                        </div>
-                        <div id="50" class="grid-item">
-                            <img src="images/img/strength/50_Lifestealer.jpg" alt="Lifestealer">
-                        </div>
-                        <div id="58" class="grid-item">
-                            <img src="images/img/strength/58_Mars.jpg" alt="Mars">
-                        </div>
-                        <div id="68" class="grid-item">
-                            <img src="images/img/strength/68_Night_Stalker.jpg" alt="Night_Stalker">
-                        </div>
-                        <div id="70" class="grid-item">
-                            <img src="images/img/strength/70_Ogre_Magi.jpg" alt="Ogre_Magi">
-                        </div>
-                        <div id="71" class="grid-item">
-                            <img src="images/img/strength/71_Omniknight.jpg" alt="Omniknight">
-                        </div>
-                        <div id="78" class="grid-item">
-                            <img src="images/img/strength/78_Primal_Beast.jpg" alt="Primal_Beast">
-                        </div>
-                        <div id="80" class="grid-item">
-                            <img src="images/img/strength/80_Pudge.jpg" alt="Pudge">
-                        </div>
-                        <div id="92" class="grid-item">
-                            <img src="images/img/strength/92_Slardar.jpg" alt="Slardar">
-                        </div>
-                        <div id="97" class="grid-item">
-                            <img src="images/img/strength/97_Spirit_Breaker.jpg" alt="Spirit_Breaker">
-                        </div>
-                        <div id="99" class="grid-item">
-                            <img src="images/img/strength/99_Sven.jpg" alt="Sven">
-                        </div>
-                        <div id="103" class="grid-item">
-                            <img src="images/img/strength/103_Tidehunter.jpg" alt="Tidehunter">
-                        </div>
-                        <div id="106" class="grid-item">
-                            <img src="images/img/strength/106_Tiny.jpg" alt="Tiny">
-                        </div>
-                        <div id="107" class="grid-item">
-                            <img src="images/img/strength/107_Treant_Protector.jpg" alt="Treant_Protector">
-                        </div>
-                        <div id="109" class="grid-item">
-                            <img src="images/img/strength/109_Tusk.jpg" alt="Tusk">
-                        </div>
-                        <div id="110" class="grid-item">
-                            <img src="images/img/strength/110_Underlord.jpg" alt="Underlord">
-                        </div>
-                        <div id="111" class="grid-item">
-                            <img src="images/img/strength/111_Undying.jpg" alt="Undying">
-                        </div>
-                        <div id="123" class="grid-item">
-                            <img src="images/img/strength/123_Wraith_King.jpg" alt="Wraith_King">
-                        </div>
-                    </div>
-                </div>
-                <div class="agility">
-                    <p class="grid-te">Ловкость</p>
-                    <div class="grid-container">
-                        <div id="4" class="grid-item">
-                            <img src="images/img/agility/4_Anti-Mage.jpg" alt="Anti-Mage">
-                        </div>
-                        <div id="5" class="grid-item">
-                            <img src="images/img/agility/5_Arc_Warden.jpg" alt="Arc_Warden">
-                        </div>
-                        <div id="10" class="grid-item">
-                            <img src="images/img/agility/10_Bloodseeker.jpg" alt="Bloodseeker">
-                        </div>
-                        <div id="11" class="grid-item">
-                            <img src="images/img/agility/11_Bounty_Hunter.jpg" alt="Bounty_Hunter">
-                        </div>
-                        <div id="18" class="grid-item">
-                            <img src="images/img/agility/18_Clinkz.jpg" alt="Clinkz">
-                        </div>
-                        <div id="29" class="grid-item">
-                            <img src="images/img/agility/29_Drow_Ranger.jpg" alt="Drow_Ranger">
-                        </div>
-                        <div id="33" class="grid-item">
-                            <img src="images/img/agility/33_Ember_Spirit.jpg" alt="Ember_Spirit">
-                        </div>
-                        <div id="36" class="grid-item">
-                            <img src="images/img/agility/36_Faceless_Void.jpg" alt="Faceless_Void">
-                        </div>
-                        <div id="38" class="grid-item">
-                            <img src="images/img/agility/38_Gyrocopter.jpg" alt="Gyrocopter">
-                        </div>
-                        <div id="39" class="grid-item">
-                            <img src="images/img/agility/39_Hoodwink.jpg" alt="Hoodwink">
-                        </div>
-                        <div id="44" class="grid-item">
-                            <img src="images/img/agility/44_Juggernaut.jpg" alt="Juggernaut">
-                        </div>
-                        <div id="54" class="grid-item">
-                            <img src="images/img/agility/54_Luna.jpg" alt="Luna">
-                        </div>
-                        <div id="59" class="grid-item">
-                            <img src="images/img/agility/59_Medusa.jpg" alt="Medusa">
-                        </div>
-                        <div id="60" class="grid-item">
-                            <img src="images/img/agility/60_Meepo.jpg" alt="Meepo">
-                        </div>
-                        <div id="62" class="grid-item">
-                            <img src="images/img/agility/62_Monkey_King.jpg" alt="Monkey_King">
-                        </div>
-                        <div id="63" class="grid-item">
-                            <img src="images/img/agility/63_Morphling.jpg" alt="_Morphling">
-                        </div>
-                        <div id="65" class="grid-item">
-                            <img src="images/img/agility/65_Naga_Siren.jpg" alt="Naga_Siren">
-                        </div>
-                        <div id="75" class="grid-item">
-                            <img src="images/img/agility/75_Phantom_Assassin.jpg" alt="Phantom_Assassin">
-                        </div>
-                        <div id="76" class="grid-item">
-                            <img src="images/img/agility/76_Phantom_Lancer.jpg" alt="Phantom_Lancer">
-                        </div>
-                        <div id="83" class="grid-item">
-                            <img src="images/img/agility/83_Razor.jpg" alt="Razor">
-                        </div>
-                        <div id="84" class="grid-item">
-                            <img src="images/img/agility/84_Riki.jpg" alt="Riki">
-                        </div>
-                        <div id="88" class="grid-item">
-                            <img src="images/img/agility/88_Shadow_Fiend.jpg" alt="Shadow_Fiend">
-                        </div>
-                        <div id="93" class="grid-item">
-                            <img src="images/img/agility/93_Slark.jpg" alt="Slark">
-                        </div>
-                        <div id="95" class="grid-item">
-                            <img src="images/img/agility/95_Sniper.jpg" alt="Sniper">
-                        </div>
-                        <div id="96" class="grid-item">
-                            <img src="images/img/agility/96_Spectre.jpg" alt="Spectre">
-                        </div>
-                        <div id="101" class="grid-item">
-                            <img src="images/img/agility/101_Templar_Assassin.jpg" alt="Templar_Assassin">
-                        </div>
-                        <div id="102" class="grid-item">
-                            <img src="images/img/agility/102_Terrorblade.jpg" alt="Terrorblade">
-                        </div>
-                        <div id="108" class="grid-item">
-                            <img src="images/img/agility/108_Troll_Warlord.jpg" alt="Troll_Warlord">
-                        </div>
-                        <div id="112" class="grid-item">
-                            <img src="images/img/agility/112_Ursa.jpg" alt="Ursa">
-                        </div>
-                        <div id="115" class="grid-item">
-                            <img src="images/img/agility/115_Viper.jpg" alt="Viper">
-                        </div>
-                        <div id="119" class="grid-item">
-                            <img src="images/img/agility/119_Weaver.jpg" alt="Weaver">
+                <div class="grid-container">
+                    <div class="grid-item strength">
+                        <p class="grid-te">Сила</p>
+                        <div class="grid-inner">
+                            <div id="2" class="grid-item">
+                                <img src="images/img/strength/2_Alchemist.jpg" alt="Alchemist">
+                            </div>
+                            <div id="6" class="grid-item">
+                                <img src="images/img/strength/6_Axe.jpg" alt="Axe">
+                            </div>
+                            <div id="13" class="grid-item">
+                                <img src="images/img/strength/13_Bristleback.jpg" alt="Bristleback">
+                            </div>
+                            <div id="15" class="grid-item">
+                                <img src="images/img/strength/15_Centaur_Warrunner.jpg" alt="Centaur_Warrunner">
+                            </div>
+                            <div id="16" class="grid-item">
+                                <img src="images/img/strength/16_Chaos_Knight.jpg" alt="Chaos_Knight">
+                            </div>
+                            <div id="23" class="grid-item">
+                                <img src="images/img/strength/23_Dawnbreaker.jpg" alt="Dawnbreaker">
+                            </div>
+                            <div id="27" class="grid-item">
+                                <img src="images/img/strength/27_Doom.jpg" alt="Doom">
+                            </div>
+                            <div id="28" class="grid-item">
+                                <img src="images/img/strength/28_Dragon_Knight.jpg" alt="Dragon_Knight">
+                            </div>
+                            <div id="30" class="grid-item">
+                                <img src="images/img/strength/30_Earth_Spirit.jpg" alt="Earth_Spirit">
+                            </div>
+                            <div id="31" class="grid-item">
+                                <img src="images/img/strength/31_Earthshaker.jpg" alt="Earthshaker">
+                            </div>
+                            <div id="32" class="grid-item">
+                                <img src="images/img/strength/32_Elder_Titan.jpg" alt="Elder_Titan">
+                            </div>
+                            <div id="40" class="grid-item">
+                                <img src="images/img/strength/40_Huskar.jpg" alt="Huskar">
+                            </div>
+                            <div id="46" class="grid-item">
+                                <img src="images/img/strength/46_Kunkka.jpg" alt="Kunkka">
+                            </div>
+                            <div id="47" class="grid-item">
+                                <img src="images/img/strength/47_Legion_Commander.jpg" alt="Legion_Commande">
+                            </div>
+                            <div id="50" class="grid-item">
+                                <img src="images/img/strength/50_Lifestealer.jpg" alt="Lifestealer">
+                            </div>
+                            <div id="58" class="grid-item">
+                                <img src="images/img/strength/58_Mars.jpg" alt="Mars">
+                            </div>
+                            <div id="68" class="grid-item">
+                                <img src="images/img/strength/68_Night_Stalker.jpg" alt="Night_Stalker">
+                            </div>
+                            <div id="70" class="grid-item">
+                                <img src="images/img/strength/70_Ogre_Magi.jpg" alt="Ogre_Magi">
+                            </div>
+                            <div id="71" class="grid-item">
+                                <img src="images/img/strength/71_Omniknight.jpg" alt="Omniknight">
+                            </div>
+                            <div id="78" class="grid-item">
+                                <img src="images/img/strength/78_Primal_Beast.jpg" alt="Primal_Beast">
+                            </div>
+                            <div id="80" class="grid-item">
+                                <img src="images/img/strength/80_Pudge.jpg" alt="Pudge">
+                            </div>
+                            <div id="92" class="grid-item">
+                                <img src="images/img/strength/92_Slardar.jpg" alt="Slardar">
+                            </div>
+                            <div id="97" class="grid-item">
+                                <img src="images/img/strength/97_Spirit_Breaker.jpg" alt="Spirit_Breaker">
+                            </div>
+                            <div id="99" class="grid-item">
+                                <img src="images/img/strength/99_Sven.jpg" alt="Sven">
+                            </div>
+                            <div id="103" class="grid-item">
+                                <img src="images/img/strength/103_Tidehunter.jpg" alt="Tidehunter">
+                            </div>
+                            <div id="106" class="grid-item">
+                                <img src="images/img/strength/106_Tiny.jpg" alt="Tiny">
+                            </div>
+                            <div id="107" class="grid-item">
+                                <img src="images/img/strength/107_Treant_Protector.jpg" alt="Treant_Protector">
+                            </div>
+                            <div id="109" class="grid-item">
+                                <img src="images/img/strength/109_Tusk.jpg" alt="Tusk">
+                            </div>
+                            <div id="110" class="grid-item">
+                                <img src="images/img/strength/110_Underlord.jpg" alt="Underlord">
+                            </div>
+                            <div id="111" class="grid-item">
+                                <img src="images/img/strength/111_Undying.jpg" alt="Undying">
+                            </div>
+                            <div id="123" class="grid-item">
+                                <img src="images/img/strength/123_Wraith_King.jpg" alt="Wraith_King">
+                            </div>
                         </div>
                     </div>
-                </div>  
-                <div class="intelligence">
-                    <p class="grid-te">Интеллект</p>
-                    <div class="grid-container">
-                        <div id="3" class="grid-item">
-                            <img src="images/img/intelligence/3_Ancient_Apparition.jpg" alt="Ancient_Apparition">
-                        </div>
-                        <div id="20" class="grid-item">
-                            <img src="images/img/intelligence/20_Crystal_Maiden.jpg" alt="Crystal_Maiden">
-                        </div>
-                        <div id="25" class="grid-item">
-                            <img src="images/img/intelligence//25_Death_Prophet.jpg" alt="Death_Prophet">
-                        </div>
-                        <div id="26" class="grid-item">
-                            <img src="images/img/intelligence/26_Disruptor.jpg" alt="Disrupto">
-                        </div>
-                        <div id="34" class="grid-item">
-                            <img src="images/img/intelligence/34_Enchantress.jpg" alt="Enchantress">
-                        </div>
-                        <div id="37" class="grid-item">
-                            <img src="images/img/intelligence/37_Grimstroke.jpg" alt="Grimstroke">
-                        </div>
-                        <div id="43" class="grid-item">
-                            <img src="images/img/intelligence/43_Jakiro.jpg" alt="Jakiro">
-                        </div>
-                        <div id="45" class="grid-item">
-                            <img src="images/img/intelligence/45_Keeper_of_the_Light.jpg" alt="Keeper_of_the_Light">
-                        </div>
-                        <div id="48" class="grid-item">
-                            <img src="images/img/intelligence/48_Leshrac.jpg" alt="Leshrac">
-                        </div>
-                        <div id="49" class="grid-item">
-                            <img src="images/img/intelligence/49_Lich.jpg" alt="Lich">
-                        </div>
-                        <div id="51" class="grid-item">
-                            <img src="images/img/intelligence/51_Lina.jpg" alt="Lina">
-                        </div>
-                        <div id="52" class="grid-item">
-                            <img src="images/img/intelligence/52_Lion.jpg" alt="Lion">
-                        </div>
-                        <div id="64" class="grid-item">
-                            <img src="images/img/intelligence/64_Muerta.jpg" alt="Muerta">
-                        </div>
-                        <div id="66" class="grid-item">
-                            <img src="images/img/intelligence/66_Nature's_Prophet.jpg" alt="Nature's_Prophet">
-                        </div>
-                        <div id="67" class="grid-item">
-                            <img src="images/img/intelligence/67_Necrophos.jpg" alt="Necrophos">
-                        </div>
-                        <div id="72" class="grid-item">
-                            <img src="images/img/intelligence/72_Oracle.jpg" alt="Oracle">
-                        </div>
-                        <div id="73" class="grid-item">
-                            <img src="images/img/intelligence/73_Outworld_Destroyer.jpg" alt="Outworld_Destroyer">
-                        </div>
-                        <div id="79" class="grid-item">
-                            <img src="images/img/intelligence/79_Puck.jpg" alt="Puck">
-                        </div>
-                        <div id="81" class="grid-item">
-                            <img src="images/img/intelligence/81_Pugna.jpg" alt="Pugna">
-                        </div>
-                        <div id="82" class="grid-item">
-                            <img src="images/img/intelligence/82_Queen_of_Pain.jpg" alt="Queen_of_Pain">
-                        </div>
-                        <div id="85" class="grid-item">
-                            <img src="images/img/intelligence/85_Rubick.jpg" alt="Rubick">
-                        </div>
-                        <div id="87" class="grid-item">
-                            <img src="images/img/intelligence/87_Shadow_Demon.jpg" alt="Shadow_Demon">
-                        </div>
-                        <div id="89" class="grid-item">
-                            <img src="images/img/intelligence/89_Shadow_Shaman.jpg" alt="Shadow_Shaman">
-                        </div>
-                        <div id="90" class="grid-item">
-                            <img src="images/img/intelligence/90_Silencer.jpg" alt="Silencer">
-                        </div>
-                        <div id="91" class="grid-item">
-                            <img src="images/img/intelligence/91_Skywrath_Mage.jpg" alt="Skywrath_Mage">
-                        </div>
-                        <div id="98" class="grid-item">
-                            <img src="images/img/intelligence/98_Storm_Spirit.jpg" alt="Storm_Spirit">
-                        </div>
-                        <div id="105" class="grid-item">
-                            <img src="images/img/intelligence/105_Tinker.jpg" alt="Tinker">
-                        </div>
-                        <div id="118" class="grid-item">
-                            <img src="images/img/intelligence/118_Warlock.jpg" alt="Warlock">
-                        </div>
-                        <div id="122" class="grid-item">
-                            <img src="images/img/intelligence/122_Witch_Doctor.jpg" alt="Witch_Doctor">
-                        </div>
-                        <div id="124" class="grid-item">
-                            <img src="images/img/intelligence/124_Zeus.jpg" alt="Zeus">
+                    <div class="grid-item agility">
+                        <p class="grid-te">Ловкость</p>
+                        <div class="grid-inner">
+                            <div id="4" class="grid-item">
+                                <img src="images/img/agility/4_Anti-Mage.jpg" alt="Anti-Mage">
+                            </div>
+                            <div id="5" class="grid-item">
+                                <img src="images/img/agility/5_Arc_Warden.jpg" alt="Arc_Warden">
+                            </div>
+                            <div id="10" class="grid-item">
+                                <img src="images/img/agility/10_Bloodseeker.jpg" alt="Bloodseeker">
+                            </div>
+                            <div id="11" class="grid-item">
+                                <img src="images/img/agility/11_Bounty_Hunter.jpg" alt="Bounty_Hunter">
+                            </div>
+                            <div id="18" class="grid-item">
+                                <img src="images/img/agility/18_Clinkz.jpg" alt="Clinkz">
+                            </div>
+                            <div id="29" class="grid-item">
+                                <img src="images/img/agility/29_Drow_Ranger.jpg" alt="Drow_Ranger">
+                            </div>
+                            <div id="33" class="grid-item">
+                                <img src="images/img/agility/33_Ember_Spirit.jpg" alt="Ember_Spirit">
+                            </div>
+                            <div id="36" class="grid-item">
+                                <img src="images/img/agility/36_Faceless_Void.jpg" alt="Faceless_Void">
+                            </div>
+                            <div id="38" class="grid-item">
+                                <img src="images/img/agility/38_Gyrocopter.jpg" alt="Gyrocopter">
+                            </div>
+                            <div id="39" class="grid-item">
+                                <img src="images/img/agility/39_Hoodwink.jpg" alt="Hoodwink">
+                            </div>
+                            <div id="44" class="grid-item">
+                                <img src="images/img/agility/44_Juggernaut.jpg" alt="Juggernaut">
+                            </div>
+                            <div id="54" class="grid-item">
+                                <img src="images/img/agility/54_Luna.jpg" alt="Luna">
+                            </div>
+                            <div id="59" class="grid-item">
+                                <img src="images/img/agility/59_Medusa.jpg" alt="Medusa">
+                            </div>
+                            <div id="60" class="grid-item">
+                                <img src="images/img/agility/60_Meepo.jpg" alt="Meepo">
+                            </div>
+                            <div id="62" class="grid-item">
+                                <img src="images/img/agility/62_Monkey_King.jpg" alt="Monkey_King">
+                            </div>
+                            <div id="63" class="grid-item">
+                                <img src="images/img/agility/63_Morphling.jpg" alt="_Morphling">
+                            </div>
+                            <div id="65" class="grid-item">
+                                <img src="images/img/agility/65_Naga_Siren.jpg" alt="Naga_Siren">
+                            </div>
+                            <div id="75" class="grid-item">
+                                <img src="images/img/agility/75_Phantom_Assassin.jpg" alt="Phantom_Assassin">
+                            </div>
+                            <div id="76" class="grid-item">
+                                <img src="images/img/agility/76_Phantom_Lancer.jpg" alt="Phantom_Lancer">
+                            </div>
+                            <div id="83" class="grid-item">
+                                <img src="images/img/agility/83_Razor.jpg" alt="Razor">
+                            </div>
+                            <div id="84" class="grid-item">
+                                <img src="images/img/agility/84_Riki.jpg" alt="Riki">
+                            </div>
+                            <div id="88" class="grid-item">
+                                <img src="images/img/agility/88_Shadow_Fiend.jpg" alt="Shadow_Fiend">
+                            </div>
+                            <div id="93" class="grid-item">
+                                <img src="images/img/agility/93_Slark.jpg" alt="Slark">
+                            </div>
+                            <div id="95" class="grid-item">
+                                <img src="images/img/agility/95_Sniper.jpg" alt="Sniper">
+                            </div>
+                            <div id="96" class="grid-item">
+                                <img src="images/img/agility/96_Spectre.jpg" alt="Spectre">
+                            </div>
+                            <div id="101" class="grid-item">
+                                <img src="images/img/agility/101_Templar_Assassin.jpg" alt="Templar_Assassin">
+                            </div>
+                            <div id="102" class="grid-item">
+                                <img src="images/img/agility/102_Terrorblade.jpg" alt="Terrorblade">
+                            </div>
+                            <div id="108" class="grid-item">
+                                <img src="images/img/agility/108_Troll_Warlord.jpg" alt="Troll_Warlord">
+                            </div>
+                            <div id="112" class="grid-item">
+                                <img src="images/img/agility/112_Ursa.jpg" alt="Ursa">
+                            </div>
+                            <div id="115" class="grid-item">
+                                <img src="images/img/agility/115_Viper.jpg" alt="Viper">
+                            </div>
+                            <div id="119" class="grid-item">
+                                <img src="images/img/agility/119_Weaver.jpg" alt="Weaver">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="universal">
-                    <p class="grid-te">Универсальные</p>
-                    <div class="grid-container">
-                        <div id="1" class="grid-item">
-                            <img src="images/img/universal/1_Abaddon.jpg" alt="Abaddon">
+                    <div class="grid-item intelligence">
+                        <p class="grid-te">Интеллект</p>
+                        <div class="grid-inner">
+                            <div id="3" class="grid-item">
+                                <img src="images/img/intelligence/3_Ancient_Apparition.jpg" alt="Ancient_Apparition">
+                            </div>
+                            <div id="20" class="grid-item">
+                                <img src="images/img/intelligence/20_Crystal_Maiden.jpg" alt="Crystal_Maiden">
+                            </div>
+                            <div id="25" class="grid-item">
+                                <img src="images/img/intelligence//25_Death_Prophet.jpg" alt="Death_Prophet">
+                            </div>
+                            <div id="26" class="grid-item">
+                                <img src="images/img/intelligence/26_Disruptor.jpg" alt="Disrupto">
+                            </div>
+                            <div id="34" class="grid-item">
+                                <img src="images/img/intelligence/34_Enchantress.jpg" alt="Enchantress">
+                            </div>
+                            <div id="37" class="grid-item">
+                                <img src="images/img/intelligence/37_Grimstroke.jpg" alt="Grimstroke">
+                            </div>
+                            <div id="43" class="grid-item">
+                                <img src="images/img/intelligence/43_Jakiro.jpg" alt="Jakiro">
+                            </div>
+                            <div id="45" class="grid-item">
+                                <img src="images/img/intelligence/45_Keeper_of_the_Light.jpg" alt="Keeper_of_the_Light">
+                            </div>
+                            <div id="48" class="grid-item">
+                                <img src="images/img/intelligence/48_Leshrac.jpg" alt="Leshrac">
+                            </div>
+                            <div id="49" class="grid-item">
+                                <img src="images/img/intelligence/49_Lich.jpg" alt="Lich">
+                            </div>
+                            <div id="51" class="grid-item">
+                                <img src="images/img/intelligence/51_Lina.jpg" alt="Lina">
+                            </div>
+                            <div id="52" class="grid-item">
+                                <img src="images/img/intelligence/52_Lion.jpg" alt="Lion">
+                            </div>
+                            <div id="64" class="grid-item">
+                                <img src="images/img/intelligence/64_Muerta.jpg" alt="Muerta">
+                            </div>
+                            <div id="66" class="grid-item">
+                                <img src="images/img/intelligence/66_Nature's_Prophet.jpg" alt="Nature's_Prophet">
+                            </div>
+                            <div id="67" class="grid-item">
+                                <img src="images/img/intelligence/67_Necrophos.jpg" alt="Necrophos">
+                            </div>
+                            <div id="72" class="grid-item">
+                                <img src="images/img/intelligence/72_Oracle.jpg" alt="Oracle">
+                            </div>
+                            <div id="73" class="grid-item">
+                                <img src="images/img/intelligence/73_Outworld_Destroyer.jpg" alt="Outworld_Destroyer">
+                            </div>
+                            <div id="79" class="grid-item">
+                                <img src="images/img/intelligence/79_Puck.jpg" alt="Puck">
+                            </div>
+                            <div id="81" class="grid-item">
+                                <img src="images/img/intelligence/81_Pugna.jpg" alt="Pugna">
+                            </div>
+                            <div id="82" class="grid-item">
+                                <img src="images/img/intelligence/82_Queen_of_Pain.jpg" alt="Queen_of_Pain">
+                            </div>
+                            <div id="85" class="grid-item">
+                                <img src="images/img/intelligence/85_Rubick.jpg" alt="Rubick">
+                            </div>
+                            <div id="87" class="grid-item">
+                                <img src="images/img/intelligence/87_Shadow_Demon.jpg" alt="Shadow_Demon">
+                            </div>
+                            <div id="89" class="grid-item">
+                                <img src="images/img/intelligence/89_Shadow_Shaman.jpg" alt="Shadow_Shaman">
+                            </div>
+                            <div id="90" class="grid-item">
+                                <img src="images/img/intelligence/90_Silencer.jpg" alt="Silencer">
+                            </div>
+                            <div id="91" class="grid-item">
+                                <img src="images/img/intelligence/91_Skywrath_Mage.jpg" alt="Skywrath_Mage">
+                            </div>
+                            <div id="98" class="grid-item">
+                                <img src="images/img/intelligence/98_Storm_Spirit.jpg" alt="Storm_Spirit">
+                            </div>
+                            <div id="105" class="grid-item">
+                                <img src="images/img/intelligence/105_Tinker.jpg" alt="Tinker">
+                            </div>
+                            <div id="118" class="grid-item">
+                                <img src="images/img/intelligence/118_Warlock.jpg" alt="Warlock">
+                            </div>
+                            <div id="122" class="grid-item">
+                                <img src="images/img/intelligence/122_Witch_Doctor.jpg" alt="Witch_Doctor">
+                            </div>
+                            <div id="124" class="grid-item">
+                                <img src="images/img/intelligence/124_Zeus.jpg" alt="Zeus">
+                            </div>
                         </div>
-                        <div id="7" class="grid-item">
-                            <img src="images/img/universal/7_Bane.jpg" alt="Bane">
-                        </div>
-                        <div id="8" class="grid-item">
-                            <img src="images/img/universal/8_Batrider.jpg" alt="Batrider">
-                        </div>
-                        <div id="9" class="grid-item">
-                            <img src="images/img/universal/9_Beastmaster.jpg" alt="Beastmaster">
-                        </div>
-                        <div id="12" class="grid-item">
-                            <img src="images/img/universal/12_Brewmaster.jpg" alt="Brewmaster">
-                        </div>
-                        <div id="14" class="grid-item">
-                            <img src="images/img/universal/14_Broodmother.jpg" alt="Broodmother">
-                        </div>
-                        <div id="17" class="grid-item">
-                            <img src="images/img/universal/17_Chen.jpg" alt="Chen">
-                        </div>
-                        <div id="19" class="grid-item">
-                            <img src="images/img/universal/19_Clockwerk.jpg" alt="Clockwerk">
-                        </div>
-                        <div id="21" class="grid-item">
-                            <img src="images/img/universal/21_Dark_Seer.jpg" alt="Dark_Seer">
-                        </div>
-                        <div id="22" class="grid-item">
-                            <img src="images/img/universal/22_Dark_Willow.jpg" alt="Dark_Willow">
-                        </div>
-                        <div id="24" class="grid-item">
-                            <img src="images/img/universal/24_Dazzle.jpg" alt="Dazzle">
-                        </div>
-                        <div id="35" class="grid-item">
-                            <img src="images/img/universal/35_Enigma.jpg" alt="Enigma">
-                        </div>
-                        <div id="41" class="grid-item">
-                            <img src="images/img/universal/41_Invoker.jpg" alt="Invoker">
-                        </div>
-                        <div id="42" class="grid-item">
-                            <img src="images/img/universal/42_Io.jpg" alt="Io">
-                        </div>
-                        <div id="53" class="grid-item">
-                            <img src="images/img/universal/53_Lone_Druid.jpg" alt="Lone_Druid">
-                        </div>
-                        <div id="55" class="grid-item">
-                            <img src="images/img/universal/55_Lycan.jpg" alt="Lycan">
-                        </div>
-                        <div id="56" class="grid-item">
-                            <img src="images/img/universal/56_Magnus.jpg" alt="Magnus">
-                        </div>
-                        <div id="57" class="grid-item">
-                            <img src="images/img/universal/57_Marci.jpg" alt="Marci">
-                        </div>
-                        <div id="61" class="grid-item">
-                            <img src="images/img/universal/61_Mirana.jpg" alt="Mirana">
-                        </div>
-                        <div id="69" class="grid-item">
-                            <img src="images/img/universal/69_Nyx_Assassin.jpg" alt="Nyx_Assassin">
-                        </div>
-                        <div id="74" class="grid-item">
-                            <img src="images/img/universal/74_Pangolier.jpg" alt="Pangolier">
-                        </div>
-                        <div id="77" class="grid-item">
-                            <img src="images/img/universal/77_Phoenix.jpg" alt="Phoenix">
-                        </div>
-                        <div id="86" class="grid-item">
-                            <img src="images/img/universal/86_Sand_King.jpg" alt="Sand_King">
-                        </div>
-                        <div id="94" class="grid-item">
-                            <img src="images/img/universal/94_Snapfire.jpg" alt="Snapfire">
-                        </div>
-                        <div id="100" class="grid-item">
-                            <img src="images/img/universal/100_Techies.jpg" alt="Techies">
-                        </div>
-                        <div id="104" class="grid-item">
-                            <img src="images/img/universal/104_Timbersaw.jpg" alt="Timbersaw">
-                        </div>
-                        <div id="113" class="grid-item">
-                            <img src="images/img/universal/113_Vengeful_Spirit.jpg" alt="Vengeful_Spirit">
-                        </div>
-                        <div id="114" class="grid-item">
-                            <img src="images/img/universal/114_Venomancer.jpg" alt="Venomancer">
-                        </div>
-                        <div id="116" class="grid-item">
-                            <img src="images/img/universal/116_Visage.jpg" alt="Visage">
-                        </div>
-                        <div id="117" class="grid-item">
-                            <img src="images/img/universal/117_Void_Spirit.jpg" alt="Void_Spirit">
-                        </div>
-                        <div id="120" class="grid-item">
-                            <img src="images/img/universal/120_Windranger.jpg" alt="Windranger">
-                        </div>
-                        <div id="121" class="grid-item">
-                            <img src="images/img/universal/121_Winter_Wyvern.jpg" alt="Winter_Wyvern">
+                    </div>
+                    <div class="grid-item universal">
+                        <p class="grid-te">Универсальные</p>
+                        <div class="grid-inner">
+                            <div id="1" class="grid-item">
+                                <img src="images/img/universal/1_Abaddon.jpg" alt="Abaddon">
+                            </div>
+                            <div id="7" class="grid-item">
+                                <img src="images/img/universal/7_Bane.jpg" alt="Bane">
+                            </div>
+                            <div id="8" class="grid-item">
+                                <img src="images/img/universal/8_Batrider.jpg" alt="Batrider">
+                            </div>
+                            <div id="9" class="grid-item">
+                                <img src="images/img/universal/9_Beastmaster.jpg" alt="Beastmaster">
+                            </div>
+                            <div id="12" class="grid-item">
+                                <img src="images/img/universal/12_Brewmaster.jpg" alt="Brewmaster">
+                            </div>
+                            <div id="14" class="grid-item">
+                                <img src="images/img/universal/14_Broodmother.jpg" alt="Broodmother">
+                            </div>
+                            <div id="17" class="grid-item">
+                                <img src="images/img/universal/17_Chen.jpg" alt="Chen">
+                            </div>
+                            <div id="19" class="grid-item">
+                                <img src="images/img/universal/19_Clockwerk.jpg" alt="Clockwerk">
+                            </div>
+                            <div id="21" class="grid-item">
+                                <img src="images/img/universal/21_Dark_Seer.jpg" alt="Dark_Seer">
+                            </div>
+                            <div id="22" class="grid-item">
+                                <img src="images/img/universal/22_Dark_Willow.jpg" alt="Dark_Willow">
+                            </div>
+                            <div id="24" class="grid-item">
+                                <img src="images/img/universal/24_Dazzle.jpg" alt="Dazzle">
+                            </div>
+                            <div id="35" class="grid-item">
+                                <img src="images/img/universal/35_Enigma.jpg" alt="Enigma">
+                            </div>
+                            <div id="41" class="grid-item">
+                                <img src="images/img/universal/41_Invoker.jpg" alt="Invoker">
+                            </div>
+                            <div id="42" class="grid-item">
+                                <img src="images/img/universal/42_Io.jpg" alt="Io">
+                            </div>
+                            <div id="53" class="grid-item">
+                                <img src="images/img/universal/53_Lone_Druid.jpg" alt="Lone_Druid">
+                            </div>
+                            <div id="55" class="grid-item">
+                                <img src="images/img/universal/55_Lycan.jpg" alt="Lycan">
+                            </div>
+                            <div id="56" class="grid-item">
+                                <img src="images/img/universal/56_Magnus.jpg" alt="Magnus">
+                            </div>
+                            <div id="57" class="grid-item">
+                                <img src="images/img/universal/57_Marci.jpg" alt="Marci">
+                            </div>
+                            <div id="61" class="grid-item">
+                                <img src="images/img/universal/61_Mirana.jpg" alt="Mirana">
+                            </div>
+                            <div id="69" class="grid-item">
+                                <img src="images/img/universal/69_Nyx_Assassin.jpg" alt="Nyx_Assassin">
+                            </div>
+                            <div id="74" class="grid-item">
+                                <img src="images/img/universal/74_Pangolier.jpg" alt="Pangolier">
+                            </div>
+                            <div id="77" class="grid-item">
+                                <img src="images/img/universal/77_Phoenix.jpg" alt="Phoenix">
+                            </div>
+                            <div id="86" class="grid-item">
+                                <img src="images/img/universal/86_Sand_King.jpg" alt="Sand_King">
+                            </div>
+                            <div id="94" class="grid-item">
+                                <img src="images/img/universal/94_Snapfire.jpg" alt="Snapfire">
+                            </div>
+                            <div id="100" class="grid-item">
+                                <img src="images/img/universal/100_Techies.jpg" alt="Techies">
+                            </div>
+                            <div id="104" class="grid-item">
+                                <img src="images/img/universal/104_Timbersaw.jpg" alt="Timbersaw">
+                            </div>
+                            <div id="113" class="grid-item">
+                                <img src="images/img/universal/113_Vengeful_Spirit.jpg" alt="Vengeful_Spirit">
+                            </div>
+                            <div id="114" class="grid-item">
+                                <img src="images/img/universal/114_Venomancer.jpg" alt="Venomancer">
+                            </div>
+                            <div id="116" class="grid-item">
+                                <img src="images/img/universal/116_Visage.jpg" alt="Visage">
+                            </div>
+                            <div id="117" class="grid-item">
+                                <img src="images/img/universal/117_Void_Spirit.jpg" alt="Void_Spirit">
+                            </div>
+                            <div id="120" class="grid-item">
+                                <img src="images/img/universal/120_Windranger.jpg" alt="Windranger">
+                            </div>
+                            <div id="121" class="grid-item">
+                                <img src="images/img/universal/121_Winter_Wyvern.jpg" alt="Winter_Wyvern">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    
     <footer class="sticky-footer">
         <p class="hz">тут я не знаю что надо</p>
     </footer>
-    <script src="/script.js" defer></script>
+    <script src="/script.js"></script>
 </body>
 </html>
