@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const myImageContainer = document.getElementById('myImageContainer');
     const enemyImageForm = document.getElementById('enemyImageForm');
     const myImageForm = document.getElementById('myImageForm');
-    let sendButton = document.querySelector('.sent');
+    const sendButton = document.querySelector('.sent');
     let activeTeam = 'myTeam'; // Инициализация активной команды
 
     let selectedImages = {
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     //конопка
     sendButton.addEventListener('click', function() {
+        console.log('фетч-запрос выполняется');
         let dataToSend = {
             myTeam: selectedImages.myTeam,
             enemyTeam: selectedImages.enemyTeam
