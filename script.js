@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             return response.json();
         })
-        .then(function(data) {
-            console.log('отправлено:', data);
+        .then(function() {
+            console.log('отправлено:');
         })
         .catch(function(error) {
             console.error('ошибка:', error);
