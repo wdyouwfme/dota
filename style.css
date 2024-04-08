@@ -336,6 +336,14 @@ img {
     bottom: 0;
     width: 100%;
 }
+.sent{
+    background-color:  rgb(7, 9, 12);;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 3px;
+    color: #fff;
+    
+}
 .hz{
     color: #FFF;
 }

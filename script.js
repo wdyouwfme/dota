@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const myImageContainer = document.getElementById('myImageContainer');
     const enemyImageForm = document.getElementById('enemyImageForm');
     const myImageForm = document.getElementById('myImageForm');
+    let sendButton = document.querySelector('.sent');
     let activeTeam = 'myTeam'; // Инициализация активной команды
 
     let selectedImages = {
@@ -68,5 +69,31 @@ document.addEventListener('DOMContentLoaded', function () {
     myImageForm.addEventListener('submit', function (event) {
         event.preventDefault();
         console.log('My Team Selected Images:', selectedImages.myTeam);
+    });
+    //конопка
+    sendButton.addEventListener('click', function() {
+        let dataToSend = {
+            myTeam: selectedImages.myTeam,
+            enemyTeam: selectedImages.enemyTeam
+        };
+        fetch('http://localhost:8081/choose', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend)
+        })
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            console.log('отправлено:', data);
+        })
+        .catch(function(error) {
+            console.error('ошибка:', error);
+        });
     });
 });
