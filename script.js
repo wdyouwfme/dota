@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
             myTeam: selectedImages.myTeam,
             enemyTeam: selectedImages.enemyTeam
         };
-        fetch('http://localhost:8081/choose', {
+        fetch('http://localhost:8080/choose', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -90,7 +90,16 @@ document.addEventListener('DOMContentLoaded', function () {
             return response.json();
         })
         .then(function(data) {
-            console.log('отправлено:', data);
+            
+            const imageElement = document.createElement('img');
+            imageElement.src = data.imageLink; // Предположим, что imageUrl содержит ссылку на изображение
+            imageElement.alt = 'image ' + data.imageAlt; // Предположим, что imageAlt содержит альтернативный текст для изображения
+            document.body.appendChild(imageElement); 
+    
+            // Добавляем название изображения в параграф
+            const paragraph = document.createElement('p');
+            paragraph.textContent = data.name; // Предположим, что imageName содержит название изображения
+            document.body.appendChild(paragraph); // Добавляем параграф в тело документа
         })
         .catch(function(error) {
             console.error('ошибка:', error);
