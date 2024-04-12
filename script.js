@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const myImageContainer = document.getElementById('myImageContainer');
     const enemyImageForm = document.getElementById('enemyImageForm');
     const myImageForm = document.getElementById('myImageForm');
-    let sendButton = document.querySelector('.sent');
+    const sendButton = document.querySelector('.sent');
     let activeTeam = 'myTeam'; // Инициализация активной команды
 
     let selectedImages = {
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     //конопка
     sendButton.addEventListener('click', function() {
+        console.log('фетч-запрос выполняется');
         let dataToSend = {
             myTeam: selectedImages.myTeam,
             enemyTeam: selectedImages.enemyTeam
@@ -90,16 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return response.json();
         })
         .then(function(data) {
-            
-            const imageElement = document.createElement('img');
-            imageElement.src = data.imageLink; // Предположим, что imageUrl содержит ссылку на изображение
-            imageElement.alt = 'image ' + data.imageAlt; // Предположим, что imageAlt содержит альтернативный текст для изображения
-            document.body.appendChild(imageElement); 
-    
-            // Добавляем название изображения в параграф
-            const paragraph = document.createElement('p');
-            paragraph.textContent = data.name; // Предположим, что imageName содержит название изображения
-            document.body.appendChild(paragraph); // Добавляем параграф в тело документа
+            console.log('отправлено:', data);
         })
         .catch(function(error) {
             console.error('ошибка:', error);
